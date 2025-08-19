@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #eef2f7;
+  color: #334155;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 1px;
+}
+
+/* LoansPage Container */
+.LoansPage {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background-color: #eef2f7;
+  padding: 2rem 1rem;
+}
+
+.LoansPage main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 41, 112, 0.08);
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  animation: fadeIn 0.5s ease-out;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-header h2 {
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-header p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.text-input, .file-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.text-input:focus, .file-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.file-input {
+  cursor: pointer;
+  background-color: #f8fafc;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #3b82f6;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  max-width: 600px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Analysis Page Styles */
+.analysis-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.progress-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2rem auto;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+.progress-background {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 3.8;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease-in-out;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.status-text {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  font-weight: 500;
+  margin-top: 1rem;
+  height: 50px; /* Reserve space to prevent layout shift */
+}
+
+.sub-text {
+  color: #64748b;
+}
+
+/* Results Page Styles */
+.result-card { 
+  text-align: center; 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.result-card h2 { color: #16a34a; }
+.result-card.rejected h2 { color: #dc2626; }
+.reason-text { font-size: 1.1rem; color: #475569; }
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.result-item {
+  background: #f1f5f9;
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.result-item .label {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-item .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.emi-highlight {
+  grid-column: 1 / -1;
+  background: #dbeafe;
+  text-align: center;
+}
+
+.emi-highlight .value {
+  color: #1d4ed8;
+  font-size: 2rem;
+}
+
+.error-message {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  border-left: 5px solid #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .LoansPage {
+    padding: 1.5rem 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .analysis-container {
+    padding: 2rem 1rem;
+  }
+  
+  .result-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .result-item .value {
+    font-size: 1.25rem;
+  }
+  
+  .emi-highlight .value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .LoansPage {
+    padding: 1rem 0.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .button {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+  
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .progress-text {
+    font-size: 1.5rem;
+  }
+  
+  .status-text {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,70 @@
+/* LoansPage.css */
+
+.loans-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ensure smooth transitions between pages */
+.loans-page > * {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Remove any conflicting styles from the old App.css */
+.loans-page .card-container,
+.loans-page .card,
+.loans-page .button-container,
+.loans-page .button {
+  /* Reset any old styles that might conflict */
+  all: unset;
+}
+
+/* Ensure proper z-index stacking */
+.loans-page .particles {
+  z-index: 1;
+}
+
+.loans-page .homepage-content,
+.loans-page .upload-content,
+.loans-page .analysis-content,
+.loans-page .results-content {
+  z-index: 2;
+}
+
+/* Smooth page transitions */
+.loans-page > * {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure proper font loading */
+.loans-page {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Remove any default margins/padding that might interfere */
+.loans-page * {
+  box-sizing: border-box;
+}
+
+/* Ensure proper viewport handling */
+.loans-page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .loans-page {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .loans-page {
+    width: 100%;
+  }
+}

@@ -1,0 +1,117 @@
+.dummy-page {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  padding: 2rem 1rem;
+  background-color: #eef2f7;
+}
+
+.dummy-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dummy-content h1 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.dummy-content p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.profile-section {
+  margin-top: 2rem;
+}
+
+.profile-section h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.profile-info {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.profile-item {
+  margin: 1rem 0;
+  padding: 1.25rem;
+  background-color: #f3e5f5;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #334155;
+  border: 1px solid #e1bee7;
+  transition: all 0.3s ease;
+}
+
+.profile-item:hover {
+  background-color: #e1bee7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-item strong {
+  color: #7b1fa2;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dummy-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .dummy-content h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-section h2 {
+    font-size: 1.75rem;
+  }
+  
+  .profile-info {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .profile-item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dummy-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dummy-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .dummy-content p {
+    font-size: 1rem;
+  }
+  
+  .profile-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-info {
+    padding: 0 0.5rem;
+  }
+  
+  .profile-item {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+}
