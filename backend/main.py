@@ -15,8 +15,8 @@ from fastapi.middleware.cors import CORSMiddleware
 # --- Configuration ---
 pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
 DB_HOST = "localhost"
-DB_USER = "root"
-DB_PASSWORD = "Swapnil@#104"
+DB_USER = "YOUR_USERNAME"
+DB_PASSWORD = "YOUR_PASSWORD"
 DB_NAME = "doc_extractor_db"
 VALIDATION_DB_NAME = "atos_srijan" # Master database for validation
 UPLOADS_DIR = "uploads"
